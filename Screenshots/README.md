@@ -57,19 +57,3 @@ Demonstrates adding a new student record through the application.
 ### Delete Student Operation
 Demonstrates deleting a student record through the application.
 <img width="1917" height="1012" alt="Delete-student demo" src="https://github.com/user-attachments/assets/e7217ea9-8568-4049-8bdb-73d8b5fb7048" />
-
-
-
-## Technologies Used
-
-- Amazon EC2
-- Amazon DynamoDB
-- AWS IAM
-- Python
-- Flask
-- Boto3
-- HTML/CSS
-
-## Project Outcome
-
-Successfully developed and deployed a cloud-based Student Management System using AWS services, implementing student record management with secure access control and DynamoDB integration.
