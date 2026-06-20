@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management System</title>
+   
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f6f9;
+            margin: 0;
+            padding: 30px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+            width: 220px;
+        }
+
+        button {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        table {
+            width: 100%;
+            background: white;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    
+    <h1>AWS Cloud Student Management System</h1>
+
+    <p style="text-align:center; color:gray;">
+              EC2 • DynamoDB • IAM
+    </p>
+
+    <div class="card">
+
+        <form action="/add" method="POST">
+
+            <input
+                type="text"
+                name="name"
+                placeholder="Student Name"
+                required>
+
+            <input
+                type="text"
+                name="rollno"
+                placeholder="Roll Number"
+                required>
+
+            <button type="submit">
+                Add Student
+            </button>
+
+        </form>
+
+    </div>
+
+    <div class="card">
+
+        <table>
+
+            <tr>
+                <th>Name</th>
+                <th>Roll Number</th>
+                <th>Action</th>
+            </tr>
+
+            {% for student in students %}
+            <tr>   
+                   <td>{{ student['Name'] }}</td>
+                   <td>{{ student['RollNo'] }}</td>
+
+                   <td>
+                                                  
+                          <a href="/delete/{{ student['RollNo'] }}">
+                              Delete
+                          </a>
+
+                   </td>           
+            </tr>
+            {% endfor %}
+
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+</html>
